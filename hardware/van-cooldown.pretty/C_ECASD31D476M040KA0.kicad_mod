@@ -1,0 +1,240 @@
+(footprint "C_ECASD31D476M040KA0"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "47 µF 20 V Aluminum - Polymer Capacitors 2917 (7343 Metric) 40mOhm 2000 Hrs @ 105°C")
+	(property "Reference" "REF**"
+		(at -1.3 -3.05 0)
+		(layer "F.SilkS")
+		(uuid "f5a82e21-c433-4afa-bfcc-b15f1a0bc1b3")
+		(effects
+			(font
+				(size 0.787402 0.787402)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C_ECASD31D476M040KA0"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "92976e0b-aa6f-4145-ba5f-545fe5a93dbb")
+		(effects
+			(font
+				(size 0.787402 0.787402)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/polymer/c90e.ashx?la=en-us"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d2662c81-bd6f-4d1b-871a-f2cbd321b173")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "47 µF 20 V Aluminum - Polymer Capacitors 2917 (7343 Metric) 40mOhm 2000 Hrs @ 105°C"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "06ebb2f7-fee1-43d3-8b59-3cc661ba3092")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5.09 -0.29)
+		(end -5.09 0.31)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fa028f1a-b659-4330-b070-d8a6201beb39")
+	)
+	(fp_line
+		(start -4.8 0)
+		(end -5.4 0)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9f6d4def-73ed-4d16-bf0a-c6e163709b89")
+	)
+	(fp_line
+		(start -3.8 -2.25)
+		(end 3.8 -2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "806dede1-7a3a-48ea-bec5-2b2cb7672898")
+	)
+	(fp_line
+		(start -3.8 -1.775)
+		(end -3.8 -2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f8c47420-5200-4cbe-8c80-ab68a710e680")
+	)
+	(fp_line
+		(start -3.8 2.25)
+		(end -3.8 1.775)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d4a77c6a-5ff4-4a43-a2bd-9093fb979a74")
+	)
+	(fp_line
+		(start -3.8 2.25)
+		(end 3.8 2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ea8ffb38-06f1-48d4-bb14-f6a8d1685101")
+	)
+	(fp_line
+		(start 3.8 -1.775)
+		(end 3.8 -2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "da1d36f3-7273-4855-ab1d-e569b31d12ad")
+	)
+	(fp_line
+		(start 3.8 2.25)
+		(end 3.8 1.775)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "87f05b6e-3216-4e0c-8f53-d31896d3b632")
+	)
+	(fp_line
+		(start -4.5 -2.35)
+		(end 4.5 -2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "c3ee2c00-80f5-4f1e-93b3-cc177b5f2cd6")
+	)
+	(fp_line
+		(start -4.5 2.35)
+		(end -4.5 -2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "e40b19f3-595c-45a9-9ddb-0e95fdabde4b")
+	)
+	(fp_line
+		(start 4.5 -2.35)
+		(end 4.5 2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "a02e9fc0-e7eb-4269-b5b3-f8ca9cca7932")
+	)
+	(fp_line
+		(start 4.5 2.35)
+		(end -4.5 2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "0de8f261-b6f0-4db5-8694-ed045e88d99b")
+	)
+	(fp_line
+		(start -3.8 -2.25)
+		(end 3.8 -2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cd57a146-d8b0-4f8d-9d9b-ca4403abfa87")
+	)
+	(fp_line
+		(start -3.8 2.25)
+		(end -3.8 -2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "262f6d67-216a-4706-9250-6a53c7a31993")
+	)
+	(fp_line
+		(start 3.8 -2.25)
+		(end 3.8 2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9e62103b-f7c5-4745-a319-c76a1315629f")
+	)
+	(fp_line
+		(start 3.8 2.25)
+		(end -3.8 2.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "20c305d2-3c80-4b07-a80c-4164618e31ac")
+	)
+	(pad "1" smd rect
+		(at 3.2 0)
+		(size 2.4 2.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "89d68c98-a2e4-460d-8310-ec31ba009f74")
+	)
+	(pad "2" smd rect
+		(at -3.2 0)
+		(size 2.4 2.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "dab3f627-8634-4bca-af01-e16eca769ca0")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/fabie/Downloads/ECASD31D476M040KA0--3DModel-STEP-402286.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

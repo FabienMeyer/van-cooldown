@@ -1,0 +1,301 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup: Documentation Environment",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "setup",
+        "--component",
+        "docs"
+      ],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup: Backend Environment",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "setup",
+        "--component",
+        "backend"
+      ],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup: All Environments",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "setup",
+        "--component",
+        "all"
+      ],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Spell Check",
+      "type": "shell",
+      "command": "uv",
+      "args": [
+        "run",
+        "pyspelling"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Prose Linting (Proselint)",
+      "type": "shell",
+      "command": "uv",
+      "args": [
+        "run",
+        "proselint",
+        "src/"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Build Documentation",
+      "type": "shell",
+      "command": "uv",
+      "args": [
+        "run",
+        "mkdocs",
+        "build"
+      ],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Serve Documentation",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "serve"
+      ],
+      "group": "build",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": ".*"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting documentation server",
+          "endsPattern": "Serving on"
+        }
+      }
+    },
+    {
+      "label": "Backend: Lint Code",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "lint",
+        "--component",
+        "backend"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [
+        "$python"
+      ]
+    },
+    {
+      "label": "Backend: Format Code",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "format",
+        "--component",
+        "backend"
+      ],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Backend: Run Tests",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "test",
+        "--component",
+        "backend"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [
+        "$python"
+      ]
+    },
+    {
+      "label": "All: Lint All Components",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "lint",
+        "--component",
+        "all"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [
+        "$python"
+      ]
+    },
+    {
+      "label": "All: Test All Components",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "test",
+        "--component",
+        "all"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": [
+        "$python"
+      ]
+    },
+    {
+      "label": "Environment: Show Status",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "tools/scripts/manage_envs.py",
+        "status"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

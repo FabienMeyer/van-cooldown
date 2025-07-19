@@ -1,0 +1,303 @@
+(footprint "IC_TPD2S300YFFR"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "IC OVERVOLTAGE PROT CTRL 9DSBGA")
+	(tags "TPD2S300YFFR ")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "38931bde-703a-43e4-a783-e5b109d1d99b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "IC_TPD2S300YFFR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9ba394b6-220e-4b96-afc9-68ce96115702")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftpd2s300"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "50aab34c-e220-4123-9205-c7f29e493aa5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "IC OVERVOLTAGE PROT CTRL 9DSBGA"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "53ca462e-4c28-4a6f-b6af-57d8ba2daf1a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_poly
+		(pts
+			(xy -0.525 -0.325001) (xy -0.525 -0.475) (xy -0.475 -0.525) (xy -0.325001 -0.525) (xy -0.275001 -0.475)
+			(xy -0.275001 -0.325001) (xy -0.325001 -0.275001) (xy -0.475 -0.275001)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "d10ccb54-689c-41c0-b2bb-19ce27811319")
+	)
+	(fp_poly
+		(pts
+			(xy -0.525 0.074999) (xy -0.525 -0.075001) (xy -0.475 -0.125001) (xy -0.325001 -0.125001) (xy -0.275001 -0.075001)
+			(xy -0.275001 0.074999) (xy -0.325001 0.124998) (xy -0.475 0.124998)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "cd8a90db-8b0f-4e8c-85a8-ad62ebb1a7df")
+	)
+	(fp_poly
+		(pts
+			(xy -0.525 0.474998) (xy -0.525 0.324998) (xy -0.475 0.274998) (xy -0.325001 0.274998) (xy -0.275001 0.324998)
+			(xy -0.275001 0.474998) (xy -0.325001 0.524998) (xy -0.475 0.524998)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "6ef0d94f-a1cd-4954-b982-f5c2b611d4bd")
+	)
+	(fp_poly
+		(pts
+			(xy -0.125001 -0.325001) (xy -0.125001 -0.475) (xy -0.075001 -0.525) (xy 0.074999 -0.525) (xy 0.124998 -0.475)
+			(xy 0.124998 -0.325001) (xy 0.074999 -0.275001) (xy -0.075001 -0.275001)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "821037c3-e9b0-44db-838e-c957413edfe6")
+	)
+	(fp_poly
+		(pts
+			(xy -0.125001 0.074999) (xy -0.125001 -0.075001) (xy -0.075001 -0.125001) (xy 0.074999 -0.125001)
+			(xy 0.124998 -0.075001) (xy 0.124998 0.074999) (xy 0.074999 0.124998) (xy -0.075001 0.124998)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "828c64ee-84cb-47cf-870d-7dfe5d571fe2")
+	)
+	(fp_poly
+		(pts
+			(xy -0.125001 0.474998) (xy -0.125001 0.324998) (xy -0.075001 0.274998) (xy 0.074999 0.274998) (xy 0.124998 0.324998)
+			(xy 0.124998 0.474998) (xy 0.074999 0.524998) (xy -0.075001 0.524998)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "4b43de7f-ef6e-45bb-921c-1c7f8a3ceb90")
+	)
+	(fp_poly
+		(pts
+			(xy 0.275001 -0.325001) (xy 0.275001 -0.475) (xy 0.325001 -0.525) (xy 0.475 -0.525) (xy 0.525 -0.475)
+			(xy 0.525 -0.325001) (xy 0.475 -0.275001) (xy 0.325001 -0.275001)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "4095c435-9d9b-46d9-913b-27bcd0abef1e")
+	)
+	(fp_poly
+		(pts
+			(xy 0.275001 0.074999) (xy 0.275001 -0.075001) (xy 0.325001 -0.125001) (xy 0.475 -0.125001) (xy 0.525 -0.075001)
+			(xy 0.525 0.074999) (xy 0.475 0.124998) (xy 0.325001 0.124998)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "60418c77-1b49-44e9-8b91-9cc9fdaf95d0")
+	)
+	(fp_poly
+		(pts
+			(xy 0.275001 0.474998) (xy 0.275001 0.324998) (xy 0.325001 0.274998) (xy 0.475 0.274998) (xy 0.525 0.324998)
+			(xy 0.525 0.474998) (xy 0.475 0.524998) (xy 0.325001 0.524998)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "f3d5c2e6-c17d-44c5-9ec4-beee12eeb99a")
+	)
+	(fp_line
+		(start -0.695 -0.695)
+		(end 0.695 -0.695)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "95fe9d05-f8d4-436a-8231-d12c061b2a08")
+	)
+	(fp_line
+		(start -0.695 0.695)
+		(end -0.695 -0.695)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "16a7a75b-be48-4f94-97d5-a49236af9e77")
+	)
+	(fp_line
+		(start -0.695 0.695)
+		(end 0.695 0.695)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3ce86e88-118a-46fd-844e-79774e54055b")
+	)
+	(fp_line
+		(start 0.695 0.695)
+		(end 0.695 -0.695)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c8589b87-aec0-41ef-ac0c-bec2923bb9a7")
+	)
+	(fp_circle
+		(center -0.400002 -0.400002)
+		(end -0.320002 -0.400002)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "bcd8d923-9e04-4b63-adba-2d9c8d132064")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "4c254468-9b0c-431a-a451-55ff2cbb4b09")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd circle
+		(at -0.399999 -0.400002 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "fef3f531-2b24-4ec6-a203-0f7175c48bd9")
+	)
+	(pad "2" smd circle
+		(at 0 -0.400002 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "9967a6c2-eefa-4a4f-86e0-9fea82d1adba")
+	)
+	(pad "3" smd circle
+		(at 0.399999 -0.400002 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "236950f7-012c-4407-8026-fed87d6e0f7c")
+	)
+	(pad "4" smd circle
+		(at -0.399999 0 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "b6e24831-93fb-4b70-a09c-19982a28da82")
+	)
+	(pad "5" smd circle
+		(at 0 0 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "d8a88e00-c92c-40cc-a051-8ea5aebe5bc1")
+	)
+	(pad "6" smd circle
+		(at 0.399999 0 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "d1340436-0b40-4dd3-ae2e-0da227be019d")
+	)
+	(pad "7" smd circle
+		(at -0.399999 0.399999 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "1ce2da19-6b9d-45f4-bf9a-4294a6cda3fb")
+	)
+	(pad "8" smd circle
+		(at 0 0.399999 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "0b439c51-6e8a-4b27-b897-40049d9a494e")
+	)
+	(pad "9" smd circle
+		(at 0.399999 0.399999 90)
+		(size 0.23 0.23)
+		(layers "F.Cu" "F.Mask")
+		(uuid "a93658a1-2f27-45a2-a7bf-c994e570d0e9")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/fabie/Downloads/TPD2S300YFFR(1)/TPD2S300YFFR.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

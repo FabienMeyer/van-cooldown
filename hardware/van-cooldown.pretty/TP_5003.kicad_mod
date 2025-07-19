@@ -1,0 +1,109 @@
+(footprint "TP_5003"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Orange PC Test Point, Miniature Phosphor Bronze Silver Plating Through Hole Mounting Type")
+	(tags "5003")
+	(property "Reference" "REF**"
+		(at 0.032 -2.2064 0)
+		(layer "F.SilkS")
+		(uuid "3a750518-d495-494e-b1c2-c461e3afb342")
+		(effects
+			(font
+				(size 0.64 0.64)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TP_5003"
+		(at 3.2832 2.2064 0)
+		(layer "F.Fab")
+		(uuid "75d03961-a6bd-4f2e-9d82-5ad84c11fb43")
+		(effects
+			(font
+				(size 0.64 0.64)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.keyelco.com/userAssets/file/M65p56.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "85aa6e24-b52a-4f03-a979-74cdd9ebb5bd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Orange PC Test Point, Miniature Phosphor Bronze Silver Plating Through Hole Mounting Type"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fa4f14be-cac2-43cc-be88-22f4674f9f65")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 1.27 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "f5262afc-a9ed-4fb7-bb8d-9ffeeff7a31d")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.52 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "4fbb9908-de3d-43d1-8626-dd9f07bd1d4e")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.27 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7dfad9db-1ec5-4e38-89fe-e20466904c07")
+	)
+	(pad "TP" thru_hole circle
+		(at 0 0)
+		(size 1.53 1.53)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "8ded095a-d297-459f-8ac7-b3eeb9881619")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/fabie/Downloads/5003/5003.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
