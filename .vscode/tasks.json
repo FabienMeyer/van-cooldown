@@ -296,6 +296,207 @@
         "panel": "shared"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Docker: Build Documentation Container",
+      "type": "shell",
+      "command": "docker",
+      "args": [
+        "build",
+        "-t",
+        "van-cooldown-docs:latest",
+        "."
+      ],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Serve Documentation",
+      "type": "shell",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-p",
+        "8000:8000",
+        "-v",
+        "${workspaceFolder}/docs/src:/app/src:ro",
+        "-v",
+        "${workspaceFolder}/docs/mkdocs.yml:/app/mkdocs.yml:ro",
+        "van-cooldown-docs:latest"
+      ],
+      "group": "build",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": ".*"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting development server",
+          "endsPattern": "Serving on"
+        }
+      }
+    },
+    {
+      "label": "Docker: Build Documentation Site",
+      "type": "shell",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-v",
+        "${workspaceFolder}/docs/src:/app/src:ro",
+        "-v",
+        "${workspaceFolder}/docs/mkdocs.yml:/app/mkdocs.yml:ro",
+        "-v",
+        "${workspaceFolder}/docs/site:/app/site",
+        "van-cooldown-docs:latest",
+        "uv",
+        "run",
+        "mkdocs",
+        "build",
+        "--clean"
+      ],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Quality Checks",
+      "type": "shell",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-v",
+        "${workspaceFolder}/docs/src:/app/src:ro",
+        "-v",
+        "${workspaceFolder}/docs/.markdownlint.json:/app/.markdownlint.json:ro",
+        "-v",
+        "${workspaceFolder}/docs/.pyspelling.yml:/app/.pyspelling.yml:ro",
+        "-v",
+        "${workspaceFolder}/docs/.aspell.en.pws:/app/.aspell.en.pws:ro",
+        "van-cooldown-docs:latest",
+        "sh",
+        "-c",
+        "echo 'Running quality checks...' && markdownlint src/**/*.md || echo 'Markdown linting completed' && uv run pyspelling || echo 'Spell checking completed' && uv run proselint src/ || echo 'Prose checking completed'"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Pull Documentation Image",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/docs/docker-docs-registry.ps1",
+        "pull"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Serve Documentation (Registry)",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/docs/docker-docs-registry.ps1",
+        "serve",
+        "-UseRegistry"
+      ],
+      "group": "build",
+      "isBackground": true,
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Build Documentation (Registry)",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/docs/docker-docs-registry.ps1",
+        "docs",
+        "-UseRegistry"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "problemMatcher": []
     }
   ]
 }
