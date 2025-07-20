@@ -14,9 +14,12 @@ RUN apk add --no-cache \
     build-base \
     git \
     curl \
-    # Aspell for spell checking
-    aspell \
-    aspell-en \
+    # Enchant library for pyenchant spell checking
+    enchant2 \
+    enchant2-dev \
+    # Hunspell dictionaries for better spell checking
+    hunspell \
+    hunspell-en \
     # SSL certificates
     ca-certificates
 
@@ -37,6 +40,9 @@ RUN uv sync --all-extras
 
 # Copy source files
 COPY . .
+
+# Make spell check script executable
+RUN chmod +x spell_check.py
 
 # Stage 3: docs-runtime - Final runtime image
 FROM docs-base AS docs-runtime

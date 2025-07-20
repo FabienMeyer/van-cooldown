@@ -10,7 +10,6 @@ ENV/
 
 # UV
 .uv/
-uv.lock
 
 # MkDocs
 site/
