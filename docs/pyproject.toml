@@ -25,11 +25,19 @@ dependencies = [
 packages = ["src"]
 
 [project.optional-dependencies]
-dev = ["linkchecker>=10.2.0", "pyspelling>=2.8.2", "proselint>=0.13.0"]
+dev = [
+    "linkchecker>=10.2.0",
+    "pyenchant>=3.2.2",      # Windows-compatible spell checker
+    "proselint>=0.13.0",
+    "pymarkdownlnt>=0.9.22", # Python-based markdown linter
+    "mdformat>=0.7.17",      # Python markdown formatter
+]
 
 [tool.uv]
 dev-dependencies = [
     "linkchecker>=10.2.0",
-    "pyspelling>=2.8.2",
+    "pyenchant>=3.2.2",      # Windows-compatible spell checker  
     "proselint>=0.13.0",
+    "pymarkdownlnt>=0.9.22", # Python-based markdown linter (replaces markdownlint-cli)
+    "mdformat>=0.7.17",      # Python markdown formatter
 ]

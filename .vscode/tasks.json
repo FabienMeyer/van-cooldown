@@ -2,18 +2,17 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Setup: Documentation Environment",
+      "label": "docs-full-quality-check-serve",
       "type": "shell",
-      "command": "python",
+      "command": "powershell.exe",
       "args": [
-        "tools/scripts/manage_envs.py",
-        "setup",
-        "--component",
-        "docs"
+        "-Command",
+        "Write-Host 'Building documentation...' -ForegroundColor Green; uv run mkdocs build --clean; if ($LASTEXITCODE -eq 0) { Write-Host 'Running spell check...' -ForegroundColor Yellow; uv run python spell_check.py; if ($LASTEXITCODE -eq 0) { Write-Host 'Running prose linting...' -ForegroundColor Yellow; uv run proselint src/; if ($LASTEXITCODE -eq 0) { Write-Host 'Running markdown linting...' -ForegroundColor Yellow; uv run pymarkdown scan src/; if ($LASTEXITCODE -eq 0) { Write-Host 'All checks passed! Starting development server...' -ForegroundColor Green; uv run mkdocs serve } else { Write-Host 'Markdown linting failed!' -ForegroundColor Red; exit 1 } } else { Write-Host 'Prose linting failed!' -ForegroundColor Red; exit 1 } } else { Write-Host 'Spell check failed!' -ForegroundColor Red; exit 1 } } else { Write-Host 'Documentation build failed!' -ForegroundColor Red; exit 1 }"
       ],
       "group": "build",
+      "isBackground": true,
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}/docs"
       },
       "presentation": {
         "echo": true,
@@ -21,59 +20,17 @@
         "focus": false,
         "panel": "shared"
       },
-      "problemMatcher": []
+      "problemMatcher": [],
+      "dependsOrder": "sequence"
     },
     {
-      "label": "Setup: Backend Environment",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "setup",
-        "--component",
-        "backend"
-      ],
-      "group": "build",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Setup: All Environments",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "setup",
-        "--component",
-        "all"
-      ],
-      "group": "build",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Docs: Spell Check",
+      "label": "docs-spell-check",
       "type": "shell",
       "command": "uv",
       "args": [
         "run",
-        "pyspelling"
+        "python",
+        "spell_check.py"
       ],
       "group": "test",
       "options": {
@@ -88,7 +45,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Docs: Prose Linting (Proselint)",
+      "label": "docs-prose-linting",
       "type": "shell",
       "command": "uv",
       "args": [
@@ -109,7 +66,29 @@
       "problemMatcher": []
     },
     {
-      "label": "Docs: Build Documentation",
+      "label": "docs-markdown-linting",
+      "type": "shell",
+      "command": "uv",
+      "args": [
+        "run",
+        "pymarkdown",
+        "scan",
+        "src/"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}/docs"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "docs-build",
       "type": "shell",
       "command": "uv",
       "args": [
@@ -130,17 +109,18 @@
       "problemMatcher": []
     },
     {
-      "label": "Docs: Serve Documentation",
+      "label": "docs-serve",
       "type": "shell",
-      "command": "python",
+      "command": "uv",
       "args": [
-        "tools/scripts/manage_envs.py",
+        "run",
+        "mkdocs",
         "serve"
       ],
       "group": "build",
       "isBackground": true,
       "options": {
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}/docs"
       },
       "presentation": {
         "echo": true,
@@ -154,151 +134,13 @@
         },
         "background": {
           "activeOnStart": true,
-          "beginsPattern": "Starting documentation server",
+          "beginsPattern": "Starting development server",
           "endsPattern": "Serving on"
         }
       }
     },
     {
-      "label": "Backend: Lint Code",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "lint",
-        "--component",
-        "backend"
-      ],
-      "group": "test",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": [
-        "$python"
-      ]
-    },
-    {
-      "label": "Backend: Format Code",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "format",
-        "--component",
-        "backend"
-      ],
-      "group": "build",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Backend: Run Tests",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "test",
-        "--component",
-        "backend"
-      ],
-      "group": "test",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": [
-        "$python"
-      ]
-    },
-    {
-      "label": "All: Lint All Components",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "lint",
-        "--component",
-        "all"
-      ],
-      "group": "test",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": [
-        "$python"
-      ]
-    },
-    {
-      "label": "All: Test All Components",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "test",
-        "--component",
-        "all"
-      ],
-      "group": "test",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": [
-        "$python"
-      ]
-    },
-    {
-      "label": "Environment: Show Status",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "tools/scripts/manage_envs.py",
-        "status"
-      ],
-      "group": "test",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Docker: Build Documentation Container",
+      "label": "docs-docker-build",
       "type": "shell",
       "command": "docker",
       "args": [
@@ -320,7 +162,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Docker: Serve Documentation",
+      "label": "docs-docker-serve",
       "type": "shell",
       "command": "docker",
       "args": [
@@ -357,7 +199,7 @@
       }
     },
     {
-      "label": "Docker: Build Documentation Site",
+      "label": "docs-docker-build-site",
       "type": "shell",
       "command": "docker",
       "args": [
@@ -389,7 +231,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Docker: Quality Checks",
+      "label": "docs-docker-quality-checks",
       "type": "shell",
       "command": "docker",
       "args": [
@@ -398,15 +240,13 @@
         "-v",
         "${workspaceFolder}/docs/src:/app/src:ro",
         "-v",
-        "${workspaceFolder}/docs/.markdownlint.json:/app/.markdownlint.json:ro",
-        "-v",
         "${workspaceFolder}/docs/.pyspelling.yml:/app/.pyspelling.yml:ro",
         "-v",
         "${workspaceFolder}/docs/.aspell.en.pws:/app/.aspell.en.pws:ro",
         "van-cooldown-docs:latest",
         "sh",
         "-c",
-        "echo 'Running quality checks...' && markdownlint src/**/*.md || echo 'Markdown linting completed' && uv run pyspelling || echo 'Spell checking completed' && uv run proselint src/ || echo 'Prose checking completed'"
+        "echo 'Running quality checks...' && uv run pyspelling && echo 'Spell checking completed' && uv run proselint src/ && echo 'Prose checking completed' && uv run pymarkdown scan src/ && echo 'Markdown linting completed'"
       ],
       "group": "test",
       "options": {
@@ -417,84 +257,6 @@
         "reveal": "always",
         "focus": false,
         "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Docker: Pull Documentation Image",
-      "type": "shell",
-      "command": "powershell.exe",
-      "args": [
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/docs/docker-docs-registry.ps1",
-        "pull"
-      ],
-      "group": "build",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
-      },
-      "options": {
-        "cwd": "${workspaceFolder}/docs"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Docker: Serve Documentation (Registry)",
-      "type": "shell",
-      "command": "powershell.exe",
-      "args": [
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/docs/docker-docs-registry.ps1",
-        "serve",
-        "-UseRegistry"
-      ],
-      "group": "build",
-      "isBackground": true,
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
-      },
-      "options": {
-        "cwd": "${workspaceFolder}/docs"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Docker: Build Documentation (Registry)",
-      "type": "shell",
-      "command": "powershell.exe",
-      "args": [
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}/docs/docker-docs-registry.ps1",
-        "docs",
-        "-UseRegistry"
-      ],
-      "group": "build",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
-      },
-      "options": {
-        "cwd": "${workspaceFolder}/docs"
       },
       "problemMatcher": []
     }

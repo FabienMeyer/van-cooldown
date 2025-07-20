@@ -1,0 +1,55 @@
+# Custom dictionary for Van Cooldown project
+# Technical terms and abbreviations that should not be flagged as misspellings
+
+# Hardware/Electronics
+BLE
+MCU
+PMIC
+GPIO
+PWM
+ADC
+PCB
+DIN
+USB
+PWA
+
+# Software/Development
+Frontend
+Backend
+API
+JSON
+YAML
+CLI
+CI
+CD
+repo
+monorepo
+subgraph
+analytics
+webhook
+websocket
+
+# Standards/Protocols
+GDPR
+RGPD
+HTTP
+HTTPS
+REST
+MQTT
+
+# Project specific
+vancooldown
+cooldown
+mkdocs
+kicad
+Nordic
+nRF54H20
+nRF21540
+TPS25751
+BQ25798
+auditable
+
+# Technical adjectives
+bootloader
+firmware
+middleware
