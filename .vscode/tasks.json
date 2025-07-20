@@ -419,6 +419,7 @@
         "panel": "shared"
       },
       "problemMatcher": []
+<<<<<<< HEAD
     },
     {
       "label": "Docker: Pull Documentation Image",
@@ -497,6 +498,8 @@
         "cwd": "${workspaceFolder}/docs"
       },
       "problemMatcher": []
+=======
+>>>>>>> c6da0051efa7175f54e652d40bd8a79fb52b351e
     }
   ]
 }
