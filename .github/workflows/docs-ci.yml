@@ -150,12 +150,10 @@ jobs:
           docker run --rm \
             -v "$(pwd)/../:/app/repo:ro" \
             -v "$(pwd)/site:/app/site" \
+            --user root \
             ${{ needs.docs-docker-build.outputs.image }} sh -c "
-              # Work from the repository root for proper git context
               cd /app/repo/docs &&
-              # Set up git config
               git config --global --add safe.directory /app/repo &&
-              # Run MkDocs build with proper working directory
               /app/.venv/bin/mkdocs build --clean --site-dir /app/site
             "
       
