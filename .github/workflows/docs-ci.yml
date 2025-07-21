@@ -148,10 +148,16 @@ jobs:
         run: |
           cd docs
           docker run --rm \
-            -v "$(pwd)/src:/app/src:ro" \
-            -v "$(pwd)/mkdocs.yml:/app/mkdocs.yml:ro" \
+            -v "$(pwd)/../:/app/repo:ro" \
             -v "$(pwd)/site:/app/site" \
-            ${{ needs.docs-docker-build.outputs.image }} uv run mkdocs build --clean --strict
+            ${{ needs.docs-docker-build.outputs.image }} sh -c "
+              # Work from the repository root for proper git context
+              cd /app/repo/docs &&
+              # Set up git config
+              git config --global --add safe.directory /app/repo &&
+              # Run MkDocs build with proper working directory
+              /app/.venv/bin/mkdocs build --clean --site-dir /app/site
+            "
       
       - name: Upload documentation site
         uses: actions/upload-artifact@v4

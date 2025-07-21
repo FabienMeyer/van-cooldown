@@ -61,7 +61,9 @@ COPY . .
 RUN adduser -D -s /bin/sh docs-user \
     && chown -R docs-user:docs-user /app \
     && mkdir -p /app/.uv-cache \
-    && chown -R docs-user:docs-user /app/.uv-cache
+    && chown -R docs-user:docs-user /app/.uv-cache \
+    && mkdir -p /app/work \
+    && chown -R docs-user:docs-user /app/work
 
 USER docs-user
 
