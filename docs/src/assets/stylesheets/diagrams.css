@@ -1,0 +1,45 @@
+/* CSS for diagram styling */
+
+/* Mermaid diagram customization */
+.mermaid {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Architecture diagrams */
+.architecture-diagram {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  box-shadow: var(--md-shadow-z1);
+}
+
+/* Hardware schematics */
+.hardware-schematic {
+  background-color: var(--md-default-bg-color);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  overflow-x: auto;
+}
+
+/* Software flow diagrams */
+.software-flow {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.4rem;
+}
+
+/* Responsive diagram container */
+.diagram-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 76.25em) {
+  .diagram-container {
+    font-size: 0.8rem;
+  }
+}
