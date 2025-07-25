@@ -1005,15 +1005,6 @@ dev = [
     { name = "pymarkdownlnt" },
 ]
 
-[package.dev-dependencies]
-dev = [
-    { name = "linkchecker" },
-    { name = "mdformat" },
-    { name = "proselint" },
-    { name = "pyenchant" },
-    { name = "pymarkdownlnt" },
-]
-
 [package.metadata]
 requires-dist = [
     { name = "linkchecker", marker = "extra == 'dev'", specifier = ">=10.2.0" },
@@ -1033,15 +1024,6 @@ requires-dist = [
     { name = "pymdown-extensions", specifier = ">=10.16" },
 ]
 provides-extras = ["dev"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "linkchecker", specifier = ">=10.2.0" },
-    { name = "mdformat", specifier = ">=0.7.17" },
-    { name = "proselint", specifier = ">=0.13.0" },
-    { name = "pyenchant", specifier = ">=3.2.2" },
-    { name = "pymarkdownlnt", specifier = ">=0.9.22" },
-]
 
 [[package]]
 name = "watchdog"
