@@ -27,6 +27,7 @@ nav:
     - Getting Started: development/getting-started.md
   - Legal:
     - Privacy Notice: legal/privacy-notice.md
+  - Version Info: version.md
 
 # Theme configuration
 theme:
@@ -75,11 +76,17 @@ theme:
 plugins:
   - search:
       lang: en
+  - macros:
+      module_name: main
   - git-revision-date-localized:
       enable_creation_date: true
       type: datetime
       fallback_to_build_date: true
       enable_git_follow: false
+  - git-committers:
+      repository: FabienMeyer/van-cooldown
+      branch: main
+      enabled: !ENV [CI, false]
 
 # Extensions
 markdown_extensions:
@@ -164,4 +171,12 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Copyright
-copyright: Copyright &copy; 2025 Van Cooldown Team
+copyright: |
+  Copyright &copy; 2025 Van Cooldown Team<br/>
+  <small>
+    📚 Documentation v{{ git_commit_count }} | 
+    🔗 <a href="{{ config.repo_url }}/commit/{{ git_commit_hash }}" title="View commit {{ git_commit_hash }}">{{ git_short_hash }}</a> on 
+    <a href="{{ config.repo_url }}/tree/{{ git_branch }}" title="View {{ git_branch }} branch">{{ git_branch }}</a>
+    {% if git_tag %} | 🏷️ {{ git_tag }}{% endif %}<br/>
+    🕒 Last updated: {{ git_commit_date.split(' ')[0] }} | Built: {{ build_date.split(' ')[0] }}
+  </small>

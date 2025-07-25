@@ -32,3 +32,4 @@ fp-info-cache
 
 # Documentation files
 docs/site/*
+__pycache__*

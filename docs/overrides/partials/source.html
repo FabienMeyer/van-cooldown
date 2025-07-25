@@ -1,0 +1,55 @@
+{% import "partials/language.html" as lang with context %}
+
+<!-- Only show git info if we're on a page -->
+{% if page %}
+<!-- Repository information -->
+{% if page.meta and page.meta.source %}
+{% set path = page.meta.source %}
+{% elif page.edit_url %}
+{% set path = page.edit_url | replace(config.edit_uri ~ "/", "") %}
+{% endif %}
+
+<!-- Last revision date -->
+{% if page.meta.git_revision_date_localized %}
+<hr />
+<div class="md-source-file">
+    <small>
+        {% if page.meta.git_creation_date_localized %}
+        {{ lang.t("source.file.date.created") }}:
+        {{ page.meta.git_creation_date_localized }}
+        <br />
+        {% endif %}
+        {{ lang.t("source.file.date.updated") }}:
+        {{ page.meta.git_revision_date_localized }}
+
+        {% if page.meta.git_committers %}
+        <br />
+        {{ lang.t("source.file.contributors") }}:
+        {% for committer in page.meta.git_committers %}
+        <a href="https://github.com/{{ committer.login }}" title="{{ committer.name }}">
+            <img src="{{ committer.avatar }}" alt="{{ committer.name }}" width="20" height="20"
+                style="border-radius: 50%; margin: 0 2px;">
+        </a>
+        {% endfor %}
+        {% endif %}
+    </small>
+</div>
+{% endif %}
+
+<!-- Source file -->
+{% if path %}
+<hr />
+<div class="md-source-file">
+    <small>
+        <span class="md-icon" title="{{ lang.t('source.file.title') }}">
+            {% include ".icons/material/file-document-outline.svg" %}
+        </span>
+        <a href="{{ page.edit_url }}" title="{{ lang.t('action.edit') }}" class="md-source-file__fact">
+            <span class="md-source-file__name">
+                {{ path }}
+            </span>
+        </a>
+    </small>
+</div>
+{% endif %}
+{% endif %}
