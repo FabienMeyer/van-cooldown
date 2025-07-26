@@ -93,12 +93,31 @@ jobs:
           cd docs
           docker run --rm \
             -v "$(pwd)/src:/app/src:ro" \
-            -v "$(pwd)/spell_check.py:/app/spell_check.py:ro" \
+            -v "$(pwd)/scripts:/app/scripts:ro" \
             -v "$(pwd)/.spelling-wordlist.txt:/app/.spelling-wordlist.txt:ro" \
-            ${{ needs.docs-docker-build.outputs.image }} uv run python spell_check.py
+            ${{ needs.docs-docker-build.outputs.image }} uv run python scripts/spell_check.py
+
+  docs-vale-linting:
+    name: Vale Prose Linting
+    runs-on: ubuntu-latest
+    needs: docs-docker-build
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Run Vale prose linting
+        run: |
+          cd docs
+          docker run --rm \
+            -v "$(pwd)/src:/app/src:ro" \
+            -v "$(pwd)/scripts:/app/scripts:ro" \
+            -v "$(pwd)/.vale.ini:/app/.vale.ini:ro" \
+            -v "$(pwd)/.vale:/app/.vale:ro" \
+            ${{ needs.docs-docker-build.outputs.image }} uv run python scripts/vale_check.py
 
   docs-prose-linting:
-    name: Prose Linting
+    name: Proselint Check
     runs-on: ubuntu-latest
     needs: docs-docker-build
     
@@ -133,7 +152,7 @@ jobs:
   docs-build:
     name: Build Documentation
     runs-on: ubuntu-latest
-    needs: [docs-docker-build, docs-spell-check, docs-prose-linting, docs-markdown-linting]
+    needs: [docs-docker-build, docs-spell-check, docs-vale-linting, docs-prose-linting, docs-markdown-linting]
     
     steps:
       - name: Checkout repository

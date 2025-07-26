@@ -1,0 +1,12 @@
+extends: substitution
+message: "Consider using '%s' instead of '%s'"
+ignorecase: true
+swap:
+  MCUs: microcontrollers
+  SBC: single-board computer
+  GPIO pin: GPIO
+  Wi-Fi module: WiFi module
+  commit id: commit hash
+  git SHA: commit hash
+  van cooldown: Van Cooldown
+  vancooldown: VanCooldown

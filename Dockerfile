@@ -21,7 +21,9 @@ RUN apk add --no-cache \
     hunspell \
     hunspell-en \
     # SSL certificates
-    ca-certificates
+    ca-certificates \
+    # Vale prose linter (available in Alpine edge)
+    && apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing vale
 
 # Install UV (Python package manager)
 RUN pip install --no-cache-dir uv
@@ -41,8 +43,11 @@ RUN uv sync --all-extras
 # Copy source files
 COPY . .
 
-# Make spell check script executable
-RUN chmod +x spell_check.py
+# Make scripts executable
+RUN chmod +x scripts/*.py
+
+# Initialize Vale configuration and sync packages
+RUN vale sync || echo "Vale sync failed, continuing..."
 
 # Stage 3: docs-runtime - Final runtime image
 FROM docs-base AS docs-runtime
@@ -53,9 +58,13 @@ WORKDIR /app
 # Copy installed dependencies from builder stage
 COPY --from=docs-builder /app/.venv /app/.venv
 COPY --from=docs-builder /app/pyproject.toml /app/uv.lock ./
+COPY --from=docs-builder /app/.vale /app/.vale
 
-# Copy source files
+# Copy source files (including scripts)
 COPY . .
+
+# Make scripts executable in runtime stage too
+RUN chmod +x scripts/*.py
 
 # Create non-root user for security (Alpine Linux syntax)
 RUN adduser -D -s /bin/sh docs-user \

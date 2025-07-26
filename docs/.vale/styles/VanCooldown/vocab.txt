@@ -1,0 +1,57 @@
+# Van Cooldown Technical Vocabulary
+# Add technical terms specific to the project here
+
+# Hardware components
+BQ25798
+TPS25751
+nRF54H20
+nRF21540
+nPM1300
+SHT40
+BME280
+INA219
+TPD2S300YFFR
+ECASD31D476M040KA0
+TVS2200DRVR
+CSD17575Q3
+CSD17581Q3A
+SPM6530
+DX07S024JJ2R1300
+
+# Technical terms
+MCU
+PMIC
+GPIO
+PWM
+SPI
+I2C
+UART
+BLE
+USB-C
+PCB
+PWA
+API
+JSON
+MQTT
+OTA
+bootloader
+firmware
+LiPo
+cooldown
+frontend
+backend
+middleware
+monorepo
+TypeScript
+JavaScript
+MkDocs
+Bluetooth
+KiCad
+Vite
+pnpm
+
+# Company/Project terms
+VanCooldown
+Copilot
+GitHub
+FabienMeyer

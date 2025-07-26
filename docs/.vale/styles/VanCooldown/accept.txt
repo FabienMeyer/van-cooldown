@@ -1,0 +1,70 @@
+# VanCooldown Project Vocabulary
+
+# Technical terms for embedded systems
+GPIO
+PWM
+UART
+SPI
+I2C
+ADC
+DAC
+RTOS
+MCU
+PCB
+SMD
+Bluetooth
+WiFi
+LoRa
+CAN
+USB
+
+# Project specific terms
+VanCooldown
+Cooldown
+cooldown
+config
+src
+endif
+ifdef
+ifndef
+firmware
+bootloader
+microcontroller
+
+# Git and build terms
+git_branch
+git_commit_hash
+git_short_hash
+git_commit_date
+git_commit_count
+git_tag
+build_date
+repo
+github
+markdown
+mkdocs
+
+# File extensions and paths
+json
+yaml
+toml
+ini
+md
+py
+c
+h
+cpp
+hpp
+js
+ts
+html
+css
+
+# Development tools
+Docker
+vscode
+pytest
+linting
+proselint
+pymarkdown
+vale
