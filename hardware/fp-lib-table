@@ -1,5 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "van-cooldownLibrary")(type "KiCad")(uri "${KIPRJMOD}/van-cooldownLibrary.pretty")(options "")(descr ""))
-  (lib (name "van-cooldown")(type "KiCad")(uri "${KIPRJMOD}/van-cooldown.pretty")(options "")(descr ""))
-)

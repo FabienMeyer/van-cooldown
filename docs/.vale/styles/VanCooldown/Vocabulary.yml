@@ -1,5 +1,0 @@
-extends: existence
-message: "Consider if '%s' is the best word here."
-level: suggestion
-tokens:
-  - VanCooldown
