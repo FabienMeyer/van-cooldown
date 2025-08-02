@@ -8,11 +8,55 @@ repo_url: https://github.com/FabienMeyer/van-cooldown
 
 theme:
   name: material
+#   features:
+#     - navigation.tabs
+#     - navigation.sections
+#     - navigation.expand
+#     - navigation.top
+#     - search.highlight
+#     - search.share
+#     - content.code.copy
+#   palette:
+#     - scheme: default
+#       primary: blue
+#       accent: blue
+#       toggle:
+#         icon: material/brightness-7
+#         name: Switch to dark mode
+#     - scheme: slate
+#       primary: blue
+#       accent: blue
+#       toggle:
+#         icon: material/brightness-4
+#         name: Switch to light mode
+
+# plugins:
+#   - search
+#   - mike:
+#       alias_type: symlink
+#       redirect_template: null
+#       deploy_prefix: ''
+#       canonical_version: null
+#       version_selector: true
+#       css_dir: css
+#       javascript_dir: js
 
 markdown_extensions:
   - pymdownx.snippets:
       base_path: '..'
       check_paths: true
+#   - admonition
+#   - pymdownx.details
+#   - pymdownx.superfences
+#   - attr_list
+#   - md_in_html
+#   - toc:
+#       permalink: true
+
+# extra:
+#   version:
+#     provider: mike
+#     default: stable
 
 nav:
   - Home: index.md

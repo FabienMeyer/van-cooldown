@@ -8,6 +8,7 @@ dependencies = [
     "mkdocs",
     "mkdocs-material",
     "mkdocs-mermaid2-plugin",
+    # "mike",
 ]
 
 [tool.uv]
@@ -20,13 +21,14 @@ dev-dependencies = [
 ]
 
 [tool.mdformat]
-# Wrap width for Markdown text (0 = no wrapping)
 wrap = 80
-
-# End files with a newline
 end_of_line = "lf"
-
-# Extensions to use
+exclude = [
+    "node_modules/**",
+    ".venv/**",
+    "site/**",
+    ".vale/**"
+]
 extensions = [
     "gfm",        # GitHub Flavored Markdown
     "frontmatter", # YAML front matter
