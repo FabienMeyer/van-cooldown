@@ -13,4 +13,22 @@ dependencies = [
 [tool.uv]
 dev-dependencies = [
     "vale",
+    "mdformat",
+    "mdformat-gfm",
+    "mdformat-frontmatter",
+    "mdformat-tables",
+]
+
+[tool.mdformat]
+# Wrap width for Markdown text (0 = no wrapping)
+wrap = 80
+
+# End files with a newline
+end_of_line = "lf"
+
+# Extensions to use
+extensions = [
+    "gfm",        # GitHub Flavored Markdown
+    "frontmatter", # YAML front matter
+    "tables",     # Table formatting
 ]

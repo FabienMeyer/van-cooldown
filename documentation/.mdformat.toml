@@ -1,0 +1,20 @@
+# mdformat configuration file
+
+# Wrap text at 80 characters (0 = no wrapping)
+wrap = 80
+
+# Ensure files end with a newline
+end_of_line = "lf"
+
+# File patterns to exclude
+exclude = [
+    "node_modules/**",
+    ".venv/**",
+    "site/**",
+    ".vale/**"
+]
+
+# Extensions to load
+[plugin.gfm]
+[plugin.frontmatter]
+[plugin.tables]
