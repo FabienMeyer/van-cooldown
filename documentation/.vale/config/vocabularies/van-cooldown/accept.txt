@@ -1,0 +1,30 @@
+# Project-specific vocabulary for van-cooldown
+# Add technical terms, product names, and project-specific terminology here
+# One term per line
+
+van-cooldown
+cooldown
+Cooldown
+MkDocs
+mkdocs
+GitHub
+API
+JSON
+YAML
+Markdown
+firmware
+Firmware
+microcontroller
+GPIO
+PWM
+I2C
+SPI
+UART
+PCB
+IoT
+README
+CI/CD
+macOS
+Linux
+Windows
+PowerShell

@@ -1,0 +1,22 @@
+site_name: Van Cooldown Documentation
+site_description: Documentation for the van-cooldown project covering hardware, firmware, and software
+site_author: Fabien Meyer
+site_url: https://fabienmeyer.github.io/van-cooldown/
+
+repo_name: FabienMeyer/van-cooldown
+repo_url: https://github.com/FabienMeyer/van-cooldown
+
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.snippets:
+      base_path: '..'
+      check_paths: true
+
+nav:
+  - Home: index.md
+  - Architecture: architecture/architecture.md
+  - Hardware: hardware/hardware.md
+  - Firmware: firmware/firmware.md
+  - Software: software/software.md

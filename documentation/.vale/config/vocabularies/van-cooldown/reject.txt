@@ -1,0 +1,8 @@
+# Terms to reject/flag in van-cooldown documentation
+# Add terms that should be avoided or flagged for review
+# One term per line
+
+# Common typos or variations to avoid
+cool-down
+cool down system
+readme

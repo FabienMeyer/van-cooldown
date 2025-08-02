@@ -176,3 +176,7 @@ bom/
 fp-info-cache
 out/
 rescue-backup/
+
+### MkDocs build output ###
+documentation/site/
+site/
