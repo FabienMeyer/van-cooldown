@@ -6,57 +6,115 @@ site_url: https://fabienmeyer.github.io/van-cooldown/
 repo_name: FabienMeyer/van-cooldown
 repo_url: https://github.com/FabienMeyer/van-cooldown
 
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+
 theme:
   name: material
-#   features:
-#     - navigation.tabs
-#     - navigation.sections
-#     - navigation.expand
-#     - navigation.top
-#     - search.highlight
-#     - search.share
-#     - content.code.copy
-#   palette:
-#     - scheme: default
-#       primary: blue
-#       accent: blue
-#       toggle:
-#         icon: material/brightness-7
-#         name: Switch to dark mode
-#     - scheme: slate
-#       primary: blue
-#       accent: blue
-#       toggle:
-#         icon: material/brightness-4
-#         name: Switch to light mode
-
-# plugins:
-#   - search
-#   - mike:
-#       alias_type: symlink
-#       redirect_template: null
-#       deploy_prefix: ''
-#       canonical_version: null
-#       version_selector: true
-#       css_dir: css
-#       javascript_dir: js
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: Anchor link to this section
   - pymdownx.snippets:
       base_path: '..'
       check_paths: true
-#   - admonition
-#   - pymdownx.details
-#   - pymdownx.superfences
-#   - attr_list
-#   - md_in_html
-#   - toc:
-#       permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: FabienMeyer
+      repo: van-cooldown
 
-# extra:
-#   version:
-#     provider: mike
-#     default: stable
+extra_javascript:
+  - https://cdn.plot.ly/plotly-latest.min.js
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
