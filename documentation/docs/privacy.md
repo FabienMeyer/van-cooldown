@@ -1,7 +1,5 @@
 # Privacy Policy
 
-## Our Commitment to Your Privacy
-
 The Van Cooldown documentation is designed with privacy in mind. We believe in keeping things simple and respecting your data.
 
 ## What We Don't Collect
@@ -16,9 +14,6 @@ The Van Cooldown documentation is designed with privacy in mind. We believe in k
 **Nothing.** This is a static documentation site that serves content without collecting any visitor data.
 
 ## Third-Party Services
-
-- **GitHub Pages**: This site is hosted on GitHub Pages. Please refer to [GitHub's Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) for their data practices
-- **Plotly.js**: Interactive charts are powered by Plotly.js loaded from CDN, but this doesn't track users
 
 ## Contact
 
