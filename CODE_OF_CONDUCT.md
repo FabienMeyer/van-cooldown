@@ -80,8 +80,7 @@ avoid conflicts and minimize harm.
 When an incident does occur, it is important to report it promptly. To report a
 possible violation, please use one of the following methods:
 
-1. **Direct Contact**: Email the project maintainer (contact information available in the repository)
-2. **Private Discussion**: Use GitHub's private discussion features when available
+**Direct Contact:** Email the project maintainer at 5593495+FabienMeyer@users.noreply.github.com.
 
 Community Moderators take reports of violations seriously and will make every
 effort to respond in a timely manner. They will investigate all reports of code of
@@ -98,7 +97,7 @@ best to repair harm, based on the incident's impact on the individuals involved
 and the community as a whole. Depending on the severity of a violation, lower
 rungs on the ladder may be skipped.
 
-### 1. Warning
+### Warning
 
 **Event**: A violation involving a single incident or series of incidents.
 
@@ -107,7 +106,7 @@ rungs on the ladder may be skipped.
 **Repair**: Examples of repair include a private written apology, acknowledgement of
 responsibility, and seeking clarification on expectations.
 
-### 2. Temporarily Limited Activities
+### Temporarily Limited Activities
 
 **Event**: A repeated incidence of a violation that previously resulted in a
 warning, or the first incidence of a more serious violation.
@@ -122,7 +121,7 @@ members.
 period to reflect on actions and impact, and being thoughtful about re-entering
 community spaces after the period is over.
 
-### 3. Temporary Suspension
+### Temporary Suspension
 
 **Event**: A pattern of repeated violation which the Community Moderators have tried
 to address with warnings, or a single serious violation.
@@ -135,7 +134,7 @@ reflect upon their behavior and possible corrective actions.
 meeting the specified conditions for return, and being thoughtful about how to
 reintegrate with the community when the suspension is lifted.
 
-### 4. Permanent Ban
+### Permanent Ban
 
 **Event**: A pattern of repeated code of conduct violations that other steps on the
 ladder have failed to resolve, or a violation so serious that the Community

@@ -1,24 +1,44 @@
 # Privacy Policy
 
-The Van Cooldown documentation is designed with privacy in mind. We believe in keeping things simple and respecting your data.
+_Last updated: August 5, 2025_
 
-## What We Don't Collect
+This website — [Van Cooldown Documentation](https://fabienmeyer.github.io/van-cooldown/) — is a static site generated using [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). It is published via [GitHub Pages](https://pages.github.com/).
 
-- **No Analytics**: We don't use Google Analytics, Matomo, or any other analytics services
-- **No Cookies**: This site doesn't set any cookies on your device
-- **No Tracking**: We don't track your browsing behavior or usage patterns
-- **No Personal Data**: We don't collect any personal information about visitors
+We value your privacy. This page outlines the minimal data practices of this site.
 
-## What We Do Collect
+## No Personal Data Collected
 
-**Nothing.** This is a static documentation site that serves content without collecting any visitor data.
+This site **does not collect, store, or process any personal data**.
 
-## Third-Party Services
+- No contact forms  
+- No user accounts  
+- No login or registration  
+- No tracking cookies or third-party analytics
+
+## No Cookies
+
+This site **does not use any cookies** — not for analytics, personalization, or advertising.
+
+## No Embedded Trackers
+
+We do **not embed** or include any scripts from third-party services that track visitors (e.g., Google Analytics, Facebook Pixel, etc.).
+
+All JavaScript used on this site is self-hosted and used exclusively for improving the documentation experience (e.g., rendering diagrams and charts via `Mermaid` and `Plotly`).
+
+## Hosting and Logs
+
+This site is hosted by [GitHub Pages](https://pages.github.com/), a static site hosting service provided by GitHub. GitHub may collect standard web server logs (e.g., IP addresses, browser type, referring pages) for operational and security purposes.
+
+Please consult [GitHub’s Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) for more details on how GitHub handles such data.
+
+## External Links
+
+This documentation may include links to third-party websites (e.g., GitHub repositories, hardware datasheets). We are not responsible for the privacy policies or practices of those external sites.
 
 ## Contact
 
-If you have any questions about this privacy policy, please contact us through our [GitHub repository](https://github.com/FabienMeyer/van-cooldown).
+If you have any questions or concerns about this privacy policy or the site’s behavior, you may reach out via the [GitHub repository](https://github.com/FabienMeyer/van-cooldown/issues) or contact the author directly on [GitHub](https://github.com/FabienMeyer).
 
----
+## Changes to This Policy
 
-*Last updated: August 2025*
+This privacy policy may be updated to reflect changes in site features or hosting. Any updates will be documented on this page, with the "last updated" date at the top revised accordingly.

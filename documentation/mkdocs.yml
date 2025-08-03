@@ -113,17 +113,20 @@ markdown_extensions:
       repo: van-cooldown
 
 extra_javascript:
-  - https://cdn.plot.ly/plotly-latest.min.js
+  - js/mermaid.min.js
+  - js/mermaid-init.js
+  - js/plotly-latest.min.js
+  - js/plotly-init.js
 
 extra_css:
   - stylesheets/extra.css
 
 extra:
   social:
-    - icon: fontawesome/brands/github
+    - icon: material/github
       link: https://github.com/FabienMeyer/van-cooldown
       name: GitHub Repository
-    - icon: fontawesome/brands/github-alt
+    - icon: material/account
       link: https://github.com/FabienMeyer
       name: GitHub Profile
   generator: false
