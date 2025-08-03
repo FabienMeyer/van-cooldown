@@ -1,4 +1,4 @@
-site_name: Van Cooldown Documentation
+site_name: Van Cooldown
 site_description: Documentation for the van-cooldown project covering hardware, firmware, and software
 site_author: Fabien Meyer
 site_url: https://fabienmeyer.github.io/van-cooldown/
@@ -23,6 +23,8 @@ plugins:
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   features:
     - navigation.instant
     - navigation.tracking
@@ -50,15 +52,15 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: blue
+      primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: blue
+      primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -116,8 +118,29 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FabienMeyer/van-cooldown
+      name: GitHub Repository
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/FabienMeyer
+      name: GitHub Profile
+  generator: false
+
+copyright: >
+  Copyright &copy; 2025 Fabien Meyer · 
+  <a href="license/">MIT License</a> · 
+  This site respects your privacy - no cookies, no tracking, no analytics
+
 nav:
-  - Home: index.md
+  - Van Cooldown:
+      - Home: index.md
+      - Contributing: contributing.md
+      - Code of Conduct: code_of_conduct.md
+      - Code Owners: codeowners.md
+      - License: license.md
+      - Privacy: privacy.md
   - Architecture: architecture/architecture.md
   - Hardware: hardware/hardware.md
   - Firmware: firmware/firmware.md
