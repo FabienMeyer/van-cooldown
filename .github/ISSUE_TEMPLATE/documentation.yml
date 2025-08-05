@@ -1,0 +1,60 @@
+name: 📖 Documentation Issue
+description: Report documentation problems or improvements
+title: "[Docs]: "
+labels: ["documentation", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve our documentation! 📚
+  
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation needs attention?
+      options:
+        - README
+        - API Documentation
+        - Hardware Documentation
+        - Setup/Installation Guide
+        - Troubleshooting
+        - Code Comments
+        - Other
+    validations:
+      required: true
+  
+  - type: input
+    id: location
+    attributes:
+      label: Document Location
+      description: Where is the documentation issue?
+      placeholder: e.g., docs/hardware/cooling-system.md, line 42
+    validations:
+      required: true
+  
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue Description
+      description: What's wrong with the documentation?
+      placeholder: The documentation is unclear because...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: How should it be improved?
+    validations:
+      required: false
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

@@ -1,0 +1,71 @@
+name: 🐛 Bug Report
+description: Report a bug or safety issue
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! 🚐
+        
+        **⚡ Safety First**: If this is a safety-critical issue with electrical components, please also contact us directly at 5593495+FabienMeyer@users.noreply.github.com
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clear description of the bug
+      placeholder: What happened?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+    validations:
+      required: true
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Your setup details
+      placeholder: |
+        - Hardware: [e.g. Arduino Uno, specific sensors]
+        - Software version: [e.g. v1.0.0]
+        - Van setup: [e.g. 2019 Ford Transit]
+    validations:
+      required: false
+  
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety Impact
+      description: Does this issue have safety implications?
+      options:
+        - label: This could affect electrical safety
+        - label: This could affect mechanical safety
+        - label: This is documentation/software only
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

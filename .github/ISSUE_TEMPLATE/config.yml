@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Security Vulnerability
+    url: https://github.com/FabienMeyer/van-cooldown/security/policy
+    about: Please report security vulnerabilities through our Security Policy
+  - name: 💬 Discussions
+    url: https://github.com/FabienMeyer/van-cooldown/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📧 Direct Contact
+    url: mailto:5593495+FabienMeyer@users.noreply.github.com
+    about: Contact the project maintainer directly

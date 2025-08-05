@@ -1,0 +1,72 @@
+name: 💡 Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["enhancement", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! 🚐✨
+        
+        We love hearing ideas from the van life community!
+  
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Description
+      description: What problem does this feature solve?
+      placeholder: I'm frustrated when...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: What would you like to see?
+      placeholder: I would like...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Any alternative solutions you've considered?
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: What category does this feature fall into?
+      options:
+        - Hardware Design
+        - Software/Firmware
+        - Documentation
+        - Community/Process
+        - Other
+    validations:
+      required: true
+  
+  - type: checkboxes
+    id: van-life-values
+    attributes:
+      label: Van Life Community Values
+      description: How does this align with our values?
+      options:
+        - label: Promotes inclusivity for all van life styles
+        - label: Encourages knowledge sharing
+        - label: Supports environmental responsibility
+        - label: Enhances community support
+        - label: Improves safety
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

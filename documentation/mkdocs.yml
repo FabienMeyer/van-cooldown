@@ -144,6 +144,7 @@ nav:
       - Code Owners: codeowners.md
       - License: license.md
       - Privacy: privacy.md
+      - Security: security.md
   - Architecture: architecture/architecture.md
   - Hardware: hardware/hardware.md
   - Firmware: firmware/firmware.md

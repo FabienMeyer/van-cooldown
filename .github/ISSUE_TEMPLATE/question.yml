@@ -1,0 +1,57 @@
+name: ❓ Question
+description: Ask a question about the project
+title: "[Question]: "
+labels: ["question", "community-support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got a question? We're here to help! 🤝
+        
+        Our community loves sharing knowledge and supporting fellow van lifers!
+  
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: I'm wondering about...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Any additional context that might help us answer?
+      placeholder: |
+        - What you're trying to achieve
+        - Your van setup
+        - What you've already tried
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What's your question about?
+      options:
+        - Hardware/Electrical
+        - Software/Programming
+        - Installation/Setup
+        - Van Life General
+        - Project Usage
+        - Contributing
+        - Other
+    validations:
+      required: false
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
